@@ -95,10 +95,3 @@ git add .
 git commit -m "Initial commit"
 git push -u origin master
 ```
-
-## Contributors
-- Albert Ruiz ([albert.ruiz@novartis.com](mailto:albert.ruiz@novartis.com))
-- Daniel Martin ([daniel.martin_martinez@novartis.com](mailto:daniel.martin_martinez@novartis.com))
-- Agustí Conesa ([agustin.conesa_gago@novartis.com](mailto:agustin.conesa_gago@novartis.com))
-- Jaume Mateu ([jaume.mateu_mateu@novartis.com](mailto:jaume.mateu_mateu@novartis.com))
-- Simone Gigante ([simone.gigante@novartis.com](mailto:simone.gigante@novartis.com))
