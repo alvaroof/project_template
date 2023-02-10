@@ -1,0 +1,9 @@
+Copyright (c) {% now 'local', '%Y' %}, Novartis International AG - Barcelona Digital Finance Hub.
+
+All rights reserved.
+
+Unauthorized copying of this file, via any medium is strictly prohibited.
+
+{{ cookiecutter.project_name }} project cannot be copied and/or distributed without
+the express permission of Novartis International AG - Barcelona Digital Finance Hub.
+(bcn.digitalfinance@novartis.com).

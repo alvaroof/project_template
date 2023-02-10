@@ -1,0 +1,9 @@
+[report]
+exclude_lines =
+    if __name__ == "__main__":
+    def __str__
+
+[run]
+omit =
+    */__init__.py
+    {{cookiecutter.package_name}}/__main__.py

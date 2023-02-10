@@ -1,0 +1,16 @@
+.git
+.devcontainer
+!.devcontainer/config_devcontainer.sh
+.dockerignore
+.editorconfig
+.gitignore
+.idea
+.pytest_cache
+.vscode
+.pre-commit-config.yaml
+Dockerfile
+htmlcov
+LICENSE
+*.code-workspace
+*__pycacye__*
+*.log*

@@ -1,0 +1,53 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.155.1/containers/python-3
+{
+	"name": "cookiecutter",
+	"build": {
+		"dockerfile": "Dockerfile",
+		"context": "..",
+		"args": {
+			"HTTP_PROXY": "http://proxy.eu.novartis.net:2010",
+			"HTTPS_PROXY": "http://proxy.eu.novartis.net:2010",
+			"http_proxy": "http://proxy.eu.novartis.net:2010",
+			"https_proxy": "http://proxy.eu.novartis.net:2010",
+			"NO_PROXY": ".novartis.net",
+			"no_proxy": ".novartis.net"
+		}
+	},
+
+	"runArgs": ["--env-file", ".devcontainer/devcontainer.env"],
+
+	"containerUser": "root",
+
+	// Set *default* container specific settings.json values on container create.
+	"settings": {
+		"autoDocstring.docstringFormat": "sphinx",
+		"python.pythonPath": "python",
+		"python.languageServer": "Pylance",
+		"python.linting.enabled": true,
+		"python.linting.pylintEnabled": true,
+		"python.linting.flake8Path": "/usr/local/bin/flake8",
+		"python.linting.pylintPath": "/usr/local/bin/pylint",
+		"python.testing.pytestPath": "/usr/local/bin/pytest",
+		"python.testing.pytestEnabled": true,
+		"python.testing.pytestArgs": ["tests"],
+		"terminal.integrated.defaultProfile.linux": "zsh"
+	},
+
+	// Add the IDs of extensions you want installed when the container is created.
+	"extensions": [
+		"ms-python.python",
+		"njpwerner.autodocstring",
+		"hediet.vscode-drawio",
+		"docsmsft.docs-markdown",
+		"streetsidesoftware.code-spell-checker",
+		"ms-toolsai.jupyter",
+		"ms-toolsai.jupyter-renderers",
+		"shuworks.vscode-table-formatter",
+		"redhat.vscode-yaml",
+		"trond-snekvik.simple-rst"
+	],
+
+	// Use 'postCreateCommand' to run commands after the container is created.
+	"postCreateCommand": "bash /tmp/config_devcontainer.sh"
+}

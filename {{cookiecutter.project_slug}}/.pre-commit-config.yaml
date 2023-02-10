@@ -1,0 +1,32 @@
+# See https://pre-commit.com for more information
+# See https://pre-commit.com/hooks.html for more hooks
+default_stages: [commit, merge-commit, push]
+repos:
+- repo: https://github.com/pre-commit/pre-commit-hooks
+  rev: v3.2.0
+  hooks:
+    - id: trailing-whitespace
+      stages: [commit, merge-commit]
+    - id: end-of-file-fixer
+      stages: [commit, merge-commit]
+    - id: fix-encoding-pragma
+      stages: [commit, merge-commit]
+    - id: mixed-line-ending
+      stages: [commit, merge-commit]
+      args: ['--fix=lf']
+
+- repo: https://github.com/kynan/nbstripout
+  rev: 0.3.9
+  hooks:
+    - id: nbstripout
+      stages: [commit, merge-commit]
+
+- repo: local
+  hooks:
+    - id: formatters
+      name: Run code formatters
+      entry: make
+      args: [format]
+      pass_filenames: false
+      language: system
+      stages: [commit, merge-commit]

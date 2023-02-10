@@ -1,0 +1,32 @@
+[tool.poetry]
+name = "cookiecutter_pypackage"
+version = "0.1.0"
+description = "This is a Cookiecutter template to create Python packages for Barcelona Digital Finance."
+authors = ["Barcelona Digital Finance Hub <bcn.digitalfinance@novartis.com>"]
+maintainers = [
+    "Ruiz, Albert <albert.ruiz@novartis.com>",
+    "Martin Martinez, Daniel <daniel.martin_martinez@novartis.com>",
+    "Conesa Gago, Agustí <agustin.conesa_gago@novartis.com>",
+    "Mateu Mateu, Jaume <jaume.mateu_mateu@novartis.com>",
+    "Gigante Gassó, Simone <simone.gigante@novartis.com>"
+]
+
+license = "Proprietary"
+
+keywords = ["novartis", "finance", "cookiecutter"]
+
+repository = "https://bitbucketenterprise.aws.novartis.net/scm/faldscore/cookiecutter_pypackage.git"
+
+readme = ["README.md", "LICENSE", "RELEASE_NOTES.md"]
+
+[tool.poetry.dependencies]
+python = "~3.9"
+cookiecutter = ">=1.4.0"
+pre-commit = ">=2.17.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.flake8]
+max-line-length = 100
