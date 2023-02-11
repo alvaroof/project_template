@@ -2,12 +2,12 @@
 name = "{{ cookiecutter.package_name }}"
 version = "{{ cookiecutter.version }}"
 description = "{{ cookiecutter.project_description }}"
-authors = ["Novartis International AG - Barcelona Digital Finance Hub <bcn.digitalfinance@novartis.com>"]
+authors = ["Ortiz Fernandez, Alvaro <ortiz.fernandez.alvaro@gmail.com>"]
 packages = [{include = "{{cookiecutter.package_name}}"}]
 
 license = "Propietary"
 
-keywords = [""]
+keywords = ["cookiecutter"]
 
 repository = "{{ cookiecutter.repository_url }}"
 
@@ -32,8 +32,6 @@ exclude = ["tests/*"]
 click = "~8"
 loguru = "~0.6"
 python = "~3.9"
-nvs-tk = {git = "https://bitbucketenterprise.aws.novartis.net/scm/faldscore/toolkit.git", rev = "1.0.0"}
-sktime = "^0.15.1"
 
 [tool.poetry.group.dev.dependencies]
 black = {extras = ["jupyter"], version = "22.6.0"}

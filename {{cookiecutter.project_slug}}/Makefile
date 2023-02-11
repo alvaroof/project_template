@@ -88,7 +88,6 @@ clean-test: ## Remove test, coverage and linting artifacts
 
 clean-docs: ## Remove files with make docs
 	rm -f docs/source/modules.rst
-	rm -f docs/source/nvs_*.rst
 	rm -f docs/source/readme.md docs/source/release_notes.md
 	rm -rf docs/build
 

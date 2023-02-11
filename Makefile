@@ -4,7 +4,7 @@
 POETRY=poetry
 
 all:
-	@echo "\nWelcome to the cookiecutter for NVS Python packages\n"
+	@echo "\nWelcome to the cookiecutter for Python packages\n"
 	@cookiecutter . -o out
 
 venv: ##Make Python virtual environment

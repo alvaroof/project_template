@@ -1,7 +1,7 @@
 FROM python:3.9.11-slim-bullseye
 
 ARG DEBIAN_FRONTEND=noninteractive
-ARG USER=nvsuser
+ARG USER=user
 
 ENV container docker
 

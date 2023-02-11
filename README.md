@@ -27,7 +27,7 @@ Repositories created from this template include
 Clone the repository with:
 
 ```shell
-git clone https://bitbucketenterprise.aws.novartis.net/scm/faldscore/cookiecutter_pypackage.git
+git clone https://github.com/alvaroof/project_template
 ```
 
 ## How to use - Docker container and VSCode
@@ -63,7 +63,7 @@ cookiecutter cookiecutter_pypackage
 
 ### Project name
 
-The name of the project shall be short and descriptive enough. It is recommended to include "Novartis" or "NVS".
+The name of the project shall be short and descriptive enough
 
 ### Project slug
 
@@ -71,17 +71,17 @@ It shall be like `project_name` (in [snake case](https://en.wikipedia.org/wiki/S
 
 ### Package name
 
-The name of the package should be: `nvs_` + `acronym`. The acronym should be generated from the project root directory.
+The acronym should be generated from the project root directory.
 
 ### Example
 
 |    Field                  |          Example                                                                               |
 | :------------------------ | :--------------------------------------------------------------------------------------------- |
-| Project name              | NVS Internal Cost Forecast                                                                     |
-| Project slug              | internal_cost_forecast                                                                         |
-| Package name              | nvs_icf                                                                                        |
-| Repository url (optional) | https://bitbucketenterprise.aws.novartis.net/projects/NVSICF/repos/internal_cost_forecast/.git |
-| Description (optional)    | This project aims to forecast internal costs for the company                                   |
+| Project name              | Project Name                                                                |
+| Project slug              | py_doing_something                                                                         |
+| Package name              | pysomething                                                                                        |
+| Repository url (optional) | https://github.com/alvaroof/project_template.git |
+| Description (optional)    | This project aims to do something                                 |
 
 ## Push the scaffold to an existing repository
 
