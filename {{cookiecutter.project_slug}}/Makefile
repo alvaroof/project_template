@@ -6,6 +6,8 @@
 PYTHON=python3
 PIP=pip3
 POETRY=poetry
+CONDA=conda
+SHELL=/bin/bash
 
 export TESTMON_DATAFILE=.testmondata
 
@@ -58,6 +60,14 @@ venv: ## Make Python virtual environment
 	$(POETRY) config experimental.system-git-client true
 	$(POETRY) install --all-extras
 	pre-commit install --hook-type pre-commit --hook-type pre-push --hook-type pre-merge-commit
+	
+conda_create_cuda_env:
+	$(SHELL) ~/.bashrc
+	$(CONDA) update conda -y
+	$(CONDA) update anaconda -y 
+	$(CONDA) env create -f environment.yml -q
+	$(CONDA) activate tensorflow-cuda
+	$(PYTHON) -m ipykernel install --user --name tensorflow-cuda --display-name "Python 3.9 (tensorflow-cuda)"
 
 clean: clean-build clean-pyc clean-test clean-docs clean-data ## Remove all build, test, coverage, artifacts and empty data/out
 

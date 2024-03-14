@@ -1,0 +1,28 @@
+
+name: tensorflow-cuda
+channels:
+    - defaults
+    - conda-forge
+dependencies:
+    - python=3.9
+    - pip
+    - cudnn=7.6
+    - cudatoolkit=10.1
+    - nb_conda
+    - jupyter
+    - scikit-learn
+    - scipy
+    - pandas
+    - pandas-datareader
+    - matplotlib
+    - tqdm
+    - requests
+    - flask
+    - pip:
+        - pymc3
+        - bayesian-optimization
+        - gym
+        - kaggle
+        - kats
+        - tensorflow==2.3.0 
+        # - -r requirements/dev.txt

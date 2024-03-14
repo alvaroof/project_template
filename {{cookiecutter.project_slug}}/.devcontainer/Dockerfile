@@ -28,6 +28,12 @@ RUN echo "Install dependencies..."\
   -y --no-install-recommends\
  && apt-get clean\
  && rm -rf /var/lib/apt/lists/*
+ 
+RUN echo "Install Conda..."\
+ && cd /tmp\
+ && curl https://repo.anaconda.com/archive/Anaconda3-2022.10-Linux-x86_64.sh --progress-bar -o installer.sh\
+ && bash installer.sh -b -p $HOME/anaconda3\
+ && rm installer.sh
 
 # Upgrade pip then install poetry and wheel
 RUN pip3 install --no-cache-dir --upgrade pip \
